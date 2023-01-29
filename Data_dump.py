@@ -20,3 +20,5 @@ if __name__ == "__main__":
     print(json_record[0])
 
     client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
+
+    
