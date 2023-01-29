@@ -1,7 +1,19 @@
 from setuptools import find_packages,setup
 
-def get_requirements():
-    pass
+from typing import List
+
+Requirement_File_Name = "requirements.txt"
+Hypen_e_dot = "-e ."
+
+def get_requirements() -> List[str]:
+    
+    with open(Requirement_File_Name) as requirement_file:
+        requirement_list = requirement_file.readlines()
+    requirement_list = [ requirement_name.replace("\n","") for requirement_name in requirement_list]
+
+    if Hypen_e_dot in requirement_list:
+        requirement_list.remove(Hypen_e_dot)
+        return requirement_list
 
 setup(
     name='Sensor',
