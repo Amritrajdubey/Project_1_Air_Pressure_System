@@ -1,17 +1,13 @@
 from sensor.logger import logging
 from sensor.exceptition import SensorException
+import sys,os
+from sensor.utils import get_collections_as_dataframe
 
-def test_logger_exceptition():
-     try:
-          result = 3/0
-          print(result)
-     except Exception as e:
-          raise e
 
 if __name__ == "__main__" :
      
      try:
-          pass
+          get_collections_as_dataframe(database_name = 'aps', collection_name= 'sensor')
      except Exception as e:
           print(e)
 
