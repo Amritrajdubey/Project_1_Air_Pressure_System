@@ -1,7 +1,7 @@
 import pandas as pd 
 from sensor.config import mongo_client
 from sensor.logger import logging
-from sensor.exceptition import SensorException
+from sensor.exception import SensorException
 import os,sys
 
 
@@ -25,8 +25,5 @@ def get_collections_as_dataframe(database_name:str,collection_name:str) -> pd.Da
         return df
     except Exception as e:
         raise SensorException(e,sys)
-
-
-
 
     pass 
