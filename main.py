@@ -13,5 +13,5 @@ if __name__ == "__main__" :
           print(data_ingestion_config.to_dict())
 
      except Exception as e:
-          print(e)
+          raise SensorException(e,sys)
 
