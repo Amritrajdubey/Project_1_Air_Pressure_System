@@ -1,7 +1,10 @@
-from sensor 
+from dataclasses import dataclass
 
-
-class DataIngestionArtifact :
+@dataclass
+class DataIngestionArtifact:
+    feature_store_file_path:str
+    train_file_path:str 
+    test_file_path:str
 
 class DataValidationArtifact :...
 class DataTransformationArtifact :...
