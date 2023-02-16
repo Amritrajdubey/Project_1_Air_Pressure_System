@@ -30,7 +30,7 @@ class DataIngestionConfig:
                 raise SensorException(e,sys)
         
 
-    def to_dict() -> dict:
+    def to_dict(self) -> dict:
         try:
             return self.__dict__
         except Exception as e:
