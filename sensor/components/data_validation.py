@@ -114,29 +114,23 @@ class DataValidation:
             logging.info(f'Droping null value column from test df')
             test_df= self.drop_missing_values_columns(df=test_df,report_key_name='Missing_values_within_test_df')
 
-            exclude_columns = ['class']
+            exclude_columns = ["class"]
             base_df = utils.convert_column_float(df=base_df, exclude_columns= exclude_columns)
             train_df = utils.convert_column_float(df= train_df, exclude_columns= exclude_columns)
             test_df = utils.convert_column_float(df=test_df, exclude_columns=exclude_columns)
 
             logging.info(f'All required column present in train df')
-            train_df_columns_status = self.does_Required_column_exist(base_df= base_df, current_df=train_df,report_key_name='Missing_columns_within_train_df')
+            train_df_missing_column = self.does_Required_column_exist(base_df= base_df, current_df=train_df,report_key_name='Missing_columns_within_train_df')
             logging.info(f'All requirend column present in test df')
-            test_df_columns_status = self.does_Required_column_exist(base_df= base_df, current_df=test_df,report_key_name='Missing_columns_within_test_df')
+            test_df_missing_column = self.does_Required_column_exist(base_df= base_df, current_df=test_df,report_key_name='Missing_columns_within_test_df')
 
-            #if train_df_missing_column:
-             #   logging.info(f'As all columns are present in train df thus checking for data drift')
-              #  self.data_drift(base_df=base_df, current_df=train_df,report_key_name='Data_drift_within_train_df')
-            #if test_df_missing_column :
-             #   logging.info(f'As all columns are present in test df thus checking fro data drift')
-              #  self.data_drift(base_df =base_df, current_df=test_df,report_key_name='Data_drift_within_test_df')
+            if train_df_missing_column:
+                logging.info(f'As all columns are present in train df thus checking for data drift')
+                self.data_drift(base_df=base_df, current_df=train_df,report_key_name='Data_drift_within_train_df')
+            if test_df_missing_column :
+                logging.info(f'As all columns are present in test df thus checking fro data drift')
+                self.data_drift(base_df =base_df, current_df=test_df,report_key_name='Data_drift_within_test_df')
 
-            if train_df_columns_status:
-                logging.info(f"As all column are available in train df hence detecting data drift")
-                self.data_drift(base_df=base_df, current_df=train_df,report_key_name="data_drift_within_train_dataset")
-            if test_df_columns_status:
-                logging.info(f"As all column are available in test df hence detecting data drift")
-                self.data_drift(base_df=base_df, current_df=test_df,report_key_name="data_drift_within_test_dataset")
             # Write the report
             logging.info(f'Writing report in yaml file')
             utils.write_yaml_file(file_path= self.data_validation_config.report_file_path,
