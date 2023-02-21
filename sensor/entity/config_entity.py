@@ -6,7 +6,9 @@ from datetime import datetime
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME= "train.csv"
 TEST_FILE_NAME = "test.csv"
-
+TRANSFORMER_OBJECT_FILE_NAME = 'transformer.pk1'
+TARGET_ENCODER_OBJECT_FILE_NAME = 'target_encoder.pk1'
+MODEL_FILE_NAME = 'model.pk1'
 
 class TrainingPipelineConfig :
     def __init__(self):
