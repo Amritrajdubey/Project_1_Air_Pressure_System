@@ -1,12 +1,11 @@
-from sensor .entity import config_entity,artifact_entity
+from sensor.entity import artifact_entity,config_entity
 from sensor.exception import SensorException
 from sensor.logger import logging
-from sensor import utils
-import os,sys
-from xgboost import XGBClassifier
 from typing import Optional
+import os,sys 
+from xgboost import XGBClassifier
+from sensor import utils
 from sklearn.metrics import f1_score
-
 
 
 class ModelTrainer:
@@ -39,6 +38,7 @@ class ModelTrainer:
             return xgb_clf
         except Exception as e:
             raise SensorException(e, sys)
+
 
     def initiate_model_trainer(self,)->artifact_entity.ModelTrainerArtifact:
         try:
