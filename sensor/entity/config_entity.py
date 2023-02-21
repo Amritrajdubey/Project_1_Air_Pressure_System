@@ -39,27 +39,25 @@ class DataIngestionConfig:
 
 class DataValidationConfig:
 
-        try:
-            def __init__(self,training_pipeline_config:TrainingPipelineConfig):
-                self.data_validation_dir = os.path.join(training_pipeline_config.artifact_dir , "data_validation")
-                self.report_file_path=os.path.join(self.data_validation_dir, "report.yaml")
-                self.missing_threshold:float = 0.2
-                self.base_file_path = os.path.join("aps_failure_training_set1.csv")
-
-#class DataValidationConfig:
- #   def __init__(self,training_pipeline_config:TrainingPipelineConfig):
-  #      try:
-   #         self.data_validation_dir : os.path.join(training_pipeline_config.artifact_dir,"data_validation")
-    #        self.report_file_path = os.path.join(self.data_validation_dir,"report.yaml")
-     #       self.missing_threshold :float = .2
-      #      self.base_file_path = os.path.join('aps_failure_training_set1.csv')
+    try:
+        def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+            self.data_validation_dir = os.path.join(training_pipeline_config.artifact_dir , "data_validation")
+            self.report_file_path=os.path.join(self.data_validation_dir, "report.yaml")
+            self.missing_threshold:float = 0.2
+            self.base_file_path = os.path.join("aps_failure_training_set1.csv")
         
-        except Exception as e:
-            raise SensorException(e,sys )
+    except Exception as e:
+        raise SensorException(e,sys )
 
+class DataTransformationConfig :
+    try:
+        def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+            self.data_transformation_dir = os.path.join(training_pipeline_config.artifact_dir, 'data_transformation')
+            self.transform_object_path = os.path.join(self.data_transformation_dir,'transformer',TRANSFORMER_OBJECT_FILE_NAME)
+            self.transformed_train_path = os.path.join(self.data_transformation_dir,'transformed',TRAIN_FILE_NAME.replace('csv','npz'))
+            self.transformed_test_path = os.path.join(data_transformation_dir,'transformed',TEST_FILE_NAME.replace('csv','npz'))
+            self.target_encoder_path = os.path.join(data_transformation_dir,'target_encoder',TARGET_ENCODER_OBJECT_FILE_NAME)
 
-
-class DataTransformationConfig :...
 class ModelTrainerConfig :...
 class ModelEvaluationCOnfig :...
 class ModelPusherConfig :...
