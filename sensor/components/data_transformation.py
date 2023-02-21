@@ -7,6 +7,11 @@ import pandas as pd
 import numpy as np 
 from typing import Optional
 from sklearn.pipeline import Pipeline 
+from imblearn.combine import SMOTETomek
+from sklearn.prepocessing import RobustScaler
+from sklearn.impute import SimpleImputer
+from sensor.config import TARGET_COLUMN
+
 
 class Datatransformation:
 
@@ -33,6 +38,22 @@ class Datatransformation:
         except Exception as e:
             raise SensorException(e, sys)
 
+    def initiate_data_transformation(self) -> artifact_entity.DataTransformationArtifact:
+
+        try:
+            # Reading train and test file
+            train_df = pd.read_csv(self.data_ingestion_artifact.train_file_path)
+            test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
+
+            # Selecting input feature for train and test df 
+            input_feature_train_df = train_df.drop(TARGET_COLUMN,axis = 1)
+            input_feature_test_df = test_df.drop(TARGET_COLUMN,axis = 1)
 
             
+
+
+
+
+
+
 
