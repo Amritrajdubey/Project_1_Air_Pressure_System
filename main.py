@@ -6,7 +6,7 @@ from datetime import datetime
 from sensor.utils import get_collections_as_dataframe
 from sensor.components import data_ingestion
 from sensor.components.data_validation import DataValidation
-from sensor.components.data_transformation import Datatransformation
+from sensor.components.data_transformation import DataTransformation
 from sensor.components.model_trainer import ModelTrainer
 
 
