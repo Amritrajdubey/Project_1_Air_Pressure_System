@@ -8,6 +8,7 @@ from sensor.components import data_ingestion
 from sensor.components.data_validation import DataValidation
 from sensor.components.data_transformation import DataTransformation
 from sensor.components.model_trainer import ModelTrainer
+from sensor.components.model_evaluation import ModelEvaluation
 
 
 if __name__ == "__main__" :
@@ -38,7 +39,9 @@ if __name__ == "__main__" :
           model_trainer = ModelTrainer(model_trainer_config = model_trainer_config, 
                                    data_transformation_artifact=data_transformation_artifact)
           model_trainer_artifact = model_trainer.initiate_model_trainer()
-          
+
+
+
 
      except Exception as e:
           print(e,sys)
