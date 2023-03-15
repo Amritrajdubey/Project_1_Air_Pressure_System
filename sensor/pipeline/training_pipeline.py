@@ -62,5 +62,7 @@ def start_training_pipeline():
      except Exception as e:
           print(e,sys)
 
+
+# Mongodb_local_host_url = "mongodb://localhost:27017/neurolabDB"
           
 
