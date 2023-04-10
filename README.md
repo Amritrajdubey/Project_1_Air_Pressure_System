@@ -33,3 +33,10 @@ git push origin main
 ## To push code from origin
 
 git pull origin main
+
+# Code to install docker image in Aws EC2 but need to run one by one
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker ubuntu
+newgrp docker
