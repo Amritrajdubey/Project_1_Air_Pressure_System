@@ -16,4 +16,8 @@ python main.py
 
 ## To initialize source code :
 
-' git clone <github_url> '
+git clone <github_url>
+
+## Clone/ Downlaod github repo in your system
+
+git add file_name
