@@ -13,3 +13,7 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+## To initialize source code :
+
+---git clone <github_url>
