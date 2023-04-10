@@ -16,4 +16,4 @@ python main.py
 
 ## To initialize source code :
 
-git clone <github_url>
+' git clone <github_url> '
