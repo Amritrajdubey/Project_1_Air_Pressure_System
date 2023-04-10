@@ -21,3 +21,11 @@ git clone <github_url>
 ## Clone/ Downlaod github repo in your system
 
 git add file_name
+
+## You can given file_name to add specific file or use "." to add everything to staging are Create commits
+
+git commit -m 'message'
+
+## To push the code to origin 
+
+git push origin main
