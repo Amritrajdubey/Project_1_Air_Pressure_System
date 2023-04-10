@@ -29,3 +29,7 @@ git commit -m 'message'
 ## To push the code to origin 
 
 git push origin main
+
+## To push code from origin
+
+git pull origin main
