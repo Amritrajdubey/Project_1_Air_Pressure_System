@@ -1,6 +1,6 @@
 # neurolab-mongo-python
 
-![image](https://user-images.githubusercontent.com/57321948/196933065-4b16c235-f3b9-4391-9cfe-4affcec87c35.png)
+![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scania.com%2Ftrucks.html&psig=AOvVaw0CgkRLMsBlHBP5IPNe3VQV&ust=1682065371225000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKD91viDuP4CFQAAAAAdAAAAABAE)
 
 ### Step 1 - Install the requirements
 
@@ -41,5 +41,4 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 newgrp docker
 
-## ch
-# c
+
