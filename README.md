@@ -1,6 +1,6 @@
 # neurolab-mongo-python
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scania.com%2Ftrucks.html&psig=AOvVaw0CgkRLMsBlHBP5IPNe3VQV&ust=1682065371225000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKD91viDuP4CFQAAAAAdAAAAABAE)
+![1644215452047](https://user-images.githubusercontent.com/105154672/233306250-f0ee47f1-4af1-4d9f-a92d-44bbe5450ae2.png)
 
 ### Step 1 - Install the requirements
 
