@@ -91,38 +91,14 @@ http://localhost:8080/train
 ```bash
 http://localhost:8080/predict
 ```
+## RUN LOCALLY
 
-### Step 2 - Run main.py file
-
+###1 .Check if the Dockerfile is available in the project directory
+###2 .Build the Docker image
 ```bash
-python main.py
+docker build --build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> --build-arg AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> --build-arg AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION> --build-arg MONGODB_URL=<MONGODB_URL> . 
 ```
-
-## To initialize source code :
-
-git clone <github_url>
-
-## Clone/ Downlaod github repo in your system
-
-git add file_name
-
-## You can given file_name to add specific file or use "." to add everything to staging are Create commits
-
-git commit -m 'message'
-
-## To push the code to origin 
-
-git push origin main
-
-## To push code from origin
-
-git pull origin main
-
-# Code to install docker image in Aws EC2 but need to run one by one
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker ubuntu
-newgrp docker
-
-
+###3 .Run the Docker image
+```bash
+docker run -d -p 8080:8080 <IMAGE_NAME>
+```
