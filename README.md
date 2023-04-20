@@ -83,6 +83,14 @@ export MONGODB_URL="mongodb+srv://<username>:<password>@mongoproject.2m81o7p.mon
 ```bash
 python app.py
 ```
+### Step 6- Train Application
+```bash 
+http://localhost:8080/train
+```
+### Step 7- Prediction Application
+```bash
+http://localhost:8080/predict
+```
 
 ### Step 2 - Run main.py file
 
