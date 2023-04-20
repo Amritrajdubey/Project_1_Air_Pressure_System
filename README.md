@@ -31,6 +31,11 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 
 Before we run the project, make sure to have MongoDB in local system, with Compass since we are using MongoDB for data storage. Also need AWS account to access the service like S3, ECR and EC2 instances.
 
+## Data Collection
+
+![l3ejlas7ozm2jgzx1-Screen Shot 2022-05-20 at 8 33 34 AM](https://user-images.githubusercontent.com/105154672/233316308-cd1e2327-da4e-4075-85d5-2af927f9e790.jpg)
+
+
 ### Step 1 - Install the requirements
 
 ```bash
