@@ -75,7 +75,13 @@ export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 
 export AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION>
 
-export MONGODB_URL="mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority"
+export MONGODB_URL="mongodb+srv://<username>:<password>@mongoproject.2m81o7p.mongodb.net/?retryWrites=true&w=majority"
+```
+
+### Step 5- Run Application server
+
+```bash
+python app.py
 ```
 
 ### Step 2 - Run main.py file
