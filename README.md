@@ -27,6 +27,10 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 - AWS EC2
 - Git Actions
 
+## Steps to Run
+
+Before we run the project, make sure to have MongoDB in local system, with Compass since we are using MongoDB for data storage. Also need AWS account to access the service like S3, ECR and EC2 instances.
+
 ### Step 1 - Install the requirements
 
 ```bash
