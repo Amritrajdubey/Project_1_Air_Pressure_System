@@ -45,22 +45,37 @@ Before we run the project, make sure to have MongoDB in local system, with Compa
 
 # Steps Involved 
 
-## Step 1- Clone the repo
-
+### Step 1- Clone the repo
+```bash
 git clone https://github.com/Amritrajdubey/Project_3_Air_Pressure_System.git
+```
 
-## Step 2- Create Conda environment after repo being cloned
+### Step 2- Create Conda environment after repo being cloned
+
 ```bash
 conda create -n sensor python=3.7.6 -y
 ```
 
+```bash
+conda activate sensor
+```
 
-
-
-### Step 1 - Install the requirements
+### Step 3- Install the requirements
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Step 4- Export Environment variable data
+
+```bash
+export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+
+export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+
+export AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION>
+
+export MONGODB_URL="mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority"
 ```
 
 ### Step 2 - Run main.py file
