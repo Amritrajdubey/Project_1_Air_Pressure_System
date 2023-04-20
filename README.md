@@ -45,7 +45,13 @@ Before we run the project, make sure to have MongoDB in local system, with Compa
 
 # Steps Involved 
 
-## Step 1 -- Clone the repo
+## Step 1- Clone the repo
+
+git clone https://github.com/Amritrajdubey/Project_3_Air_Pressure_System.git
+
+## Step 2- Create Conda environment after repo being cloned
+
+conda create -n sensor python=3.7.6 -y
 
 
 
