@@ -102,3 +102,54 @@ docker build --build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> --build-arg AWS_S
 ```bash
 docker run -d -p 8080:8080 <IMAGE_NAME>
 ```
+###To run the project first execute the below commmand. MONGO DB URL:
+```bash
+mongodb+srv://<username>:<password>@mongoproject.2m81o7p.mongodb.net/?retryWrites=true&w=majority
+```
+###windows user
+```bash
+MONGO_DB_URL= mongodb+srv://<username>:<password>@mongoproject.2m81o7p.mongodb.net/?retryWrites=true&w=majority
+```
+###Linux User
+```bash
+mongodb+srv://<username>:<password>@mongoproject.2m81o7p.mongodb.net/?retryWrites=true&w=majority
+```
+###Then Run
+```bash
+python main.py
+```
+###Download Dataset
+```bash
+wget https://raw.githubusercontent.com/Amritrajdubey/Project_3_Air_Pressure_System/main/aps_failure_training_set1.csv
+```
+###To Check and reset git log
+```bash
+git log
+git reset --soft 6afd
+6afd -> last 4 digit of log. 
+```
+###Add and Upload to git
+```bash
+git add filename
+we can also use . for all file(Current directory)
+
+git commit -m "Message"
+git push origin main
+```
+##Install Docker in AWS(EC2)
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+
+```bash
+AWS_ACCESS_KEY_ID =
+AWS_SECRET_ACCESS_KEY =
+AWS_REGION =
+AWS_ECR_LOGIN_URI =
+ECR_REPOSITORY_NAME =
+BUCKET_NAME =
+MONGO_DB_URL =
+```
