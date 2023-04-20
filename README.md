@@ -35,6 +35,22 @@ Before we run the project, make sure to have MongoDB in local system, with Compa
 
 ![l3ejlas7ozm2jgzx1-Screen Shot 2022-05-20 at 8 33 34 AM](https://user-images.githubusercontent.com/105154672/233316308-cd1e2327-da4e-4075-85d5-2af927f9e790.jpg)
 
+## Project Architecture
+
+![bmlp_0401](https://user-images.githubusercontent.com/105154672/233317719-10974723-e2fa-4647-87f3-01c0aa5726f0.png)
+
+## Deployement Architecture
+
+![lpzhautvn28rj3hoij1h](https://user-images.githubusercontent.com/105154672/233319943-5b75eb43-1e1e-4cb0-9b29-9bf126e63724.png)
+
+# Steps Involved 
+
+## Step 1 -- Clone the repo
+
+
+
+
+
 
 ### Step 1 - Install the requirements
 
